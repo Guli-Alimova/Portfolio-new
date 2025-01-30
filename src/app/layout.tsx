@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Poppins, Raleway } from "next/font/google";
+import "./styles/globals.css";
+import Header from "./components/Header";
+import Saidbar from "./components/Saidbar";
+import Tab from "./components/Tab";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'], 
+  style: ['normal', 'italic'],
+  variable: '--font-poppins', 
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
 });
 
@@ -25,9 +30,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} ${raleway.variable}  antialiased `}
       >
-        {children}
+        <Header/>
+        <div className=" bg-[#EBF2FA] py-[152px]">
+        <div className="container relative"> 
+          <Saidbar/> 
+          <Tab/>
+        </div> 
+        </div>
+       
+         {children} 
+    
       </body>
     </html>
   );
