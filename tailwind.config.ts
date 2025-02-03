@@ -12,9 +12,8 @@ export default {
       colors: {
         primary:"#000000",
         secondary:"#F2F5F9",
-        linear:"#FF9C1A",
-        linear1:"#ED250A",
-
+        silver:"rgba(11, 9, 9, 0.5)"
+      
       },
     },
   },

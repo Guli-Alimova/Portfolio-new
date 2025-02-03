@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins, Raleway } from "next/font/google";
+import { Pacifico, Poppins, Raleway } from "next/font/google";
 import "./styles/globals.css";
 import Header from "./components/Header";
 import Saidbar from "./components/Saidbar";
-import Tab from "./components/Tab";
+import MainContant from "./components/MainContant";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -15,6 +15,15 @@ const poppins = Poppins({
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
+  weight: ['400', '500', '700'], 
+  style: ['normal', 'italic'],
+});
+
+const pacifico = Pacifico({
+  variable: "--font-pacifico",
+  subsets: ["latin"],
+  weight: ['400'], 
+  style: ['normal'],
 });
 
 export const metadata: Metadata = {
@@ -30,13 +39,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${raleway.variable}  antialiased `}
+        className={`${poppins?.variable} ${raleway?.variable} ${pacifico?.variable}  antialiased `}
       >
         <Header/>
         <div className=" bg-[#EBF2FA] py-[152px]">
-        <div className="container relative"> 
+        <div className="container flex gap-[9px]"> 
           <Saidbar/> 
-          <Tab/>
+          <MainContant/>
         </div> 
         </div>
        

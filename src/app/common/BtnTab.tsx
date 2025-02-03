@@ -9,9 +9,9 @@ interface ButtonProps {
 
 const BtnTab: React.FC<ButtonProps> = ({ children})=>{
   return (
-    <div className='pt-[16px] pb-[20px] py-[23px] bg-[#E1E8EF] rounded-[20px] font-raleway font-semibold text-xs leading-5 text-center text-primary w-[80px] h-[80px]'>
+    <button className='pt-[16px] pb-[20px] py-[23px] bg-[#E1E8EF] rounded-[20px] raleway font-semibold text-xs leading-5  text-center text-primary max-w-[80px] max-h-[80px] w-full h-full'>
 {children}
-    </div>
+    </button>
   )
 }
 
