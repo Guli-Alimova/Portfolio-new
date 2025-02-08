@@ -31,10 +31,10 @@ const aboutme = [
 ];
 const About = () => {
   return (
-    <div className='pt-[18px] pr-[55px] pb-[32зч] pl-[71px] bg-white rounded-[20px]'>
+    <div className='pt-[18px] pr-[55px] pb-[32px] pl-[71px] bg-white rounded-[20px]'>
         <div className='flex items-center gap-[32px]'>
             <h3 className='poppins text-[40px] font-medium leading-[40px] tracking-wide text-[#0B0909] uppercase'>About me</h3> 
-            <span className='w-[252px] h-[2px] rounded bg-linear inline-block'></span>
+            <span className='w-[252px] h-[2px] rounded bg-linear inline-block gradient-bg'></span>
         </div>
         <p className='font-raleway text-base font-medium text-primary py-[16px]'>
         Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
@@ -42,12 +42,12 @@ const About = () => {
         My journey in the world of web development has been nothing short of exhilarating, and 
         I constantly strive to enhance my skills and embrace emerging trends in the industry
         </p>
-
+         
         <h4 className='poppins text-[32px] font-medium leading-[40px] tracking-wide text-[#0B0909] pb-[28px]'>What I do! </h4>
-    {aboutme.map((item)=>(
-        <AboutCard item={item} key={item.id} />
+   <div className='grid grid-cols-2 gap-4'> {aboutme.map((item)=>(
+       <AboutCard item={item} key={item.id}/>
     ))}
-  
+  </div>
 
     </div>
   )
