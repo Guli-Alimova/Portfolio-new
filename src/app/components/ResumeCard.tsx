@@ -1,12 +1,7 @@
 import React from 'react'
 
-interface Resume {
-  id: number;
-  title: string;
-  year:string;
-  about: string;
-}
-const ResumeCard = ({ item }: { item: Resume }) => {
+
+const ResumeCard = ({ item }: { item: any }) => {
   return (
     <div className='py-[24px] pl-2.5 bg-[#FFE3BF] rounded-[10px] my-[24px] max-w-[288px] w-full  '>
         <p className='raleway text-sm font-normal text-silver'>{item.year}</p>

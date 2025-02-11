@@ -2,6 +2,12 @@ import React from 'react'
 import { Education, Experince } from '../common/svg'
 import ResumeCard from './ResumeCard'
 
+interface Resume {
+    id: number;
+    title: string;
+    year:string;
+    about: string;
+  }
 const education = [
 {
     id: 1,
@@ -135,7 +141,7 @@ const Resume = () => {
             <Education/><h4>Education</h4>      
             </div> 
             {education.map((item)=>(
-              <ResumeCard item={item} key={item.id}/>    
+              <ResumeCard key={item.id} item={item} />    
             ))}
           
             
