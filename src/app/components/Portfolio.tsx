@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const Portfolio: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("all");
 
-  // Loyihalar ma'lumotlari (kategoriya bilan birga)
   const projects = [
     {
       id: 1,
@@ -43,29 +42,25 @@ const Portfolio: React.FC = () => {
     }
   ];
 
-  // Kategoriya nomlarini loyihalar ro‘yxatidan olish
   const categories = ["all", ...Array.from(new Set(projects.map((project) => project.category)))];
 
-  // Filter qilingan loyihalar
   const filteredProjects = activeTab === "all" ? projects : projects.filter((project) => project.category === activeTab);
 
   return (
-    <div className="pt-[18px] pr-[55px] pb-[32px] pl-[71px] bg-white rounded-[20px]">
-      {/* Sarlavha */}
-      <div className="flex items-center gap-[32px]">
-        <h3 className="poppins text-[40px] font-medium leading-[40px] tracking-wide text-[#0B0909] uppercase">
+    <div className="p-4 sm:p-6 md:p-8 bg-white rounded-2xl">
+      <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+        <h3 className="poppins text-2xl sm:text-3xl md:text-4xl font-medium text-[#0B0909] uppercase">
           Portfolio
         </h3>
-        <span className="w-[252px] h-[2px] rounded bg-linear inline-block gradient-bg"></span>
+        <span className="w-full sm:w-[252px] h-[2px] rounded bg-linear inline-block gradient-bg"></span>
       </div>
 
-      {/* Tab tugmalari */}
-      <div className="flex justify-end gap-4 mt-4">
+      <div className="flex flex-wrap justify-center sm:justify-end gap-2 sm:gap-4 mt-4">
         {categories.map((category, index) => (
           <button
             key={index}
-            className={`poppins text-base font-medium py-2 px-4 rounded-md ${
-              activeTab === category ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
+            className={`poppins text-sm sm:text-base font-medium py-2 px-4 rounded-md transition-colors ${
+              activeTab === category ? "gradient-text" : " text-silver hover:gradient-bg"
             }`}
             onClick={() => setActiveTab(category)}
           >
@@ -74,22 +69,19 @@ const Portfolio: React.FC = () => {
         ))}
       </div>
 
-      {/* Filterlangan loyihalar */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project) => (
-          <a href={project.link} target="_blank" rel="noopener noreferrer" >
-            <div key={project.id} className="border py-2 px-2  rounded-lg shadow-md">
-              <img src={project.image} alt={project.title} className="w-full h-[100px] object-cover rounded-lg" />
-              <h3  className="poppins font-normal text-base text-primary">{project.title}</h3>
-              <p className="poppins font-normal text-xs text-silver">{project.description}</p>
-            </div>  
-            
-          </a>
-            
+            <a key={project.id} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+              <div className="border p-2 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <img src={project.image} alt={project.title} className="w-full h-40 object-cover rounded-lg" />
+                <h3 className="poppins font-medium text-lg text-primary mt-2">{project.title}</h3>
+                <p className="poppins text-sm text-gray-600">{project.description}</p>
+              </div>
+            </a>
           ))
         ) : (
-          <p className="text-gray-500">No projects found.</p>
+          <p className="text-gray-500 text-center w-full">No projects found.</p>
         )}
       </div>
     </div>

@@ -129,57 +129,55 @@ const softskill = [
 const Resume = () => {
   return (
     <>
-    <div className='pt-[18px] pr-[55px] pb-[32px] pl-[71px] bg-white rounded-t-[20px]'>
-    <div className='flex items-center gap-[32px]'>
-        <h3 className='poppins text-[40px] font-medium leading-[40px] tracking-wide text-[#0B0909] uppercase'>Resume</h3> 
-        <span className='w-[252px] h-[2px] rounded bg-linear inline-block gradient-bg'></span>
-    </div>
+    <div className='p-4 sm:pt-[18px] sm:pr-[55px] sm:pb-[32px] sm:pl-[71px] bg-white rounded-t-[20px]'>
+      <div className='flex flex-col sm:flex-row items-center gap-4 sm:gap-[32px]'>
+        <h3 className='poppins text-2xl sm:text-[40px] font-medium tracking-wide text-[#0B0909] uppercase'>Resume</h3>
+        <span className='w-full sm:w-[252px] h-[2px] rounded bg-linear inline-block gradient-bg'></span>
+      </div>
 
-    <div  className='grid grid-cols-2 gap-4'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
         <div>
-            <div className='flex items-center gap-4 pt-3.5'>
-            <Education/><h4>Education</h4>      
-            </div> 
-            {education.map((item)=>(
-              <ResumeCard key={item.id} item={item} />    
-            ))}
-          
-            
+          <div className='flex items-center gap-4 pt-3.5'>
+            <Education />
+            <h4 className='text-lg sm:text-xl font-semibold'>Education</h4>
+          </div>
+          {education.map((item) => (
+            <ResumeCard key={item.id} item={item} />
+          ))}
         </div>
-    
+
         <div>
-        <div className='flex items-center gap-4  pt-3.5'>
-            <Experince/><h4>Experince</h4>
-        </div> 
-          { experince.map((item)=>(
-                <ResumeCard item={item} key={item.id}/>  
-            )) 
-             
-             }
-         
+          <div className='flex items-center gap-4 pt-3.5'>
+            <Experince />
+            <h4 className='text-lg sm:text-xl font-semibold'>Experience</h4>
+          </div>
+          {experince.map((item) => (
+            <ResumeCard item={item} key={item.id} />
+          ))}
         </div>
-       
-
+      </div>
     </div>
- </div>   
-   <div className='pt-[18px] pr-[55px] pb-[32px] pl-[71px] bg-[#F8FBFB] rounded-b-lg flex justify-between gap-4'>
-    <div> <h3 className='poppins text-[27px] font-medium leading-[46px] tracking-wide text-[#0B0909] uppercase'>Work Skills</h3>
-   {workskill.map((item)=>(
-   <div className='flex '><button className="py-1 px-2 bg-[#E1E8EF] rounded-lg " key={item.id}>{item.skill}</button></div> 
-))}
-   </div> 
 
-   <div> <h3 className='poppins text-[27px] font-medium leading-[46px] tracking-wide text-[#0B0909] uppercase'>Soft Skills</h3>
-   {softskill.map((item)=>(
-    <button className="py-1 px-2 bg-[#E1E8EF] rounded-lg flex justify-between gap-4 flex-wrap" key={item.id}>{item.skill}</button>
-))}
-   </div> 
+    <div className='p-4 sm:pt-[18px] sm:pr-[55px] sm:pb-[32px] sm:pl-[71px] bg-[#F8FBFB] rounded-b-lg flex flex-col sm:flex-row justify-between gap-4'>
+      <div>
+        <h3 className='poppins text-xl sm:text-[27px] font-medium tracking-wide text-[#0B0909] uppercase'>Work Skills</h3>
+        <div className='flex flex-wrap gap-2'>
+          {workskill.map((item) => (
+            <button className='py-1 px-2 bg-[#E1E8EF] rounded-lg' key={item.id}>{item.skill}</button>
+          ))}
+        </div>
+      </div>
 
+      <div>
+        <h3 className='poppins text-xl sm:text-[27px] font-medium tracking-wide text-[#0B0909] uppercase'>Soft Skills</h3>
+        <div className='flex flex-wrap gap-2'>
+          {softskill.map((item) => (
+            <button className='py-1 px-2 bg-[#E1E8EF] rounded-lg' key={item.id}>{item.skill}</button>
+          ))}
+        </div>
+      </div>
     </div>
-  
-
-   
-    </>
+  </>
   )
 }
 

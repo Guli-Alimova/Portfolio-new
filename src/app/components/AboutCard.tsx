@@ -1,18 +1,25 @@
-import React from 'react'
+import React from 'react';
 import { ReactNode } from 'react';
+
 interface AboutMe {
   id: number;
   title: string;
   svg: ReactNode;
   about: string;
 }
+
 const AboutCard = ({ item }: { item: AboutMe }) => {
   return (
-    <div className='py-[3px] px-[15px] bg-[#FFEBD1] rounded-xl w-[303px] max-w-full h-full'>
-       <div className='flex items-center'><span>{item.svg}</span> <h3 className='pl-2.5 poppins font-semibold text-2xl leading-5 text-primary'>{item.title}</h3></div>
-       <p className='raleway font-normal text-sm  text-primary'>{item.about}</p>
+    <div className='p-4 sm:p-5 bg-[#FFEBD1] rounded-xl w-full max-w-[303px] h-full'>
+      <div className='flex items-center gap-2'>
+        <span>{item.svg}</span>
+        <h3 className='poppins font-semibold text-lg sm:text-base leading-5 text-primary'>{item.title}</h3>
+      </div>
+      <p className='raleway font-normal text-xs sm:text-sm text-primary mt-2'>
+        {item.about}
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default AboutCard
+export default AboutCard;

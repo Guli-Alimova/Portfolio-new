@@ -13,20 +13,21 @@ const Tab = () => {
   return (
     <div>
       {/* Tab tugmalari */}
-      <div className="mt-[-115px] mb-2.5 flex justify-between max-w-[503px] w-full ml-auto py-[10px] px-[31px] border-2 border-[#F2F7FC] shadow-nav rounded-[20px]">
-        <BtnTab onClick={() => setActiveTab("home")}>
-          <Home /> Home
-        </BtnTab>
-        <BtnTab onClick={() => setActiveTab("resume")}>
-          <ResumeMe /> Resume
-        </BtnTab>
-        <BtnTab onClick={() => setActiveTab("work")}>
-          <Work /> Work
-        </BtnTab>
-        <BtnTab onClick={() => setActiveTab("contact")}>
-          <Contact /> Contact
-        </BtnTab>
-      </div>
+      <div className="mt-[-115px] mb-2.5 flex flex-wrap justify-between max-w-[503px] w-full ml-auto py-[10px] px-[31px] border-2 border-[#F2F7FC] shadow-nav rounded-[20px]">
+  <BtnTab onClick={() => setActiveTab("home")} className="w-full max-w-auto mb-2 sm:mb-0">
+    <Home /> Home
+  </BtnTab>
+  <BtnTab onClick={() => setActiveTab("resume")} className="w-full max-w-auto mb-2 sm:mb-0">
+    <ResumeMe /> Resume
+  </BtnTab>
+  <BtnTab onClick={() => setActiveTab("work")} className="w-full max-w-auto mb-2 sm:mb-0">
+    <span ><Work /> Work</span>
+  </BtnTab>
+  <BtnTab onClick={() => setActiveTab("contact")} className="w-full max-w-auto mb-2 sm:mb-0">
+    <Contact /> Contact
+  </BtnTab>
+</div>
+
       <div >
         {activeTab === "home" && <About/>}
         {activeTab === "resume" && <Resume/>}
