@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import { Call, Download, Email, Facebook, Github, Instagram, Location } from '../common/svg'
+import { Call, Download, Email, Facebook, Github, Instagram, Location, Telegram } from '../common/svg'
 import Button from '../common/Button'
-import Link from 'next/link'
+
 
 const Saidbar = () => {
   return (
@@ -19,9 +19,9 @@ const Saidbar = () => {
       Frontend developer
     </p>
     <div className='mb-[23px] flex justify-center items-center gap-2.5'>
-      <Button><Facebook /></Button>
-      <Button><Github /></Button>
-      <Button><Instagram /></Button>
+      <Button href="https://t.me/Alimova_Guli" ><Telegram /></Button>
+      <Button href="https://github.com/Guli-Alimova"><Github /></Button>
+      <Button href="https://www.instagram.com/guli._alimova/"><Instagram /></Button>
     </div>
 
     <div className='p-[33px] bg-[#F2F5F9] rounded-[20px]'>
@@ -49,9 +49,11 @@ const Saidbar = () => {
         </div>
       </div>
 
-      <button className='py-[12px] px-[20px] rounded-[20px] gradient-bg text-white flex gap-2 items-center mt-[16px] mb-[33px] mx-auto'>
+      <a href='/pdf/CV_Alimova.pdf'
+         download="CV_Alimova.pdf"
+       className='py-[12px] px-[20px] rounded-[20px] gradient-bg text-white flex gap-2 items-center mt-[16px] mb-[33px] mx-auto hover: bg-transparent'>
         <Download /> Download Resume
-      </button>
+      </a>
     </div>
   </div>
 </div>

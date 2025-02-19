@@ -9,9 +9,9 @@ const Header = () => {
           <h3 className='pacifico font-medium text-xl sm:text-2xl'>
             Alimova <span className='gradient-text'>Gulbahor</span>
           </h3>
-          <button className='p-4 sm:p-[19px] rounded-full bg-[#EBF2FA] border drop-shadow-lg'>
+          {/* <button className='p-4 sm:p-[19px] rounded-full bg-[#EBF2FA] border drop-shadow-lg'>
             <Mood />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

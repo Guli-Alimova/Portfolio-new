@@ -7,7 +7,7 @@ const Portfolio: React.FC = () => {
     {
       id: 1,
       title: "Project Management App",
-      category: "work",
+      category: "React",
       description: "A web application for managing projects.",
       platform: "React",
       link: "https://example.com/project1",
@@ -16,16 +16,16 @@ const Portfolio: React.FC = () => {
     {
       id: 2,
       title: "E-commerce Website",
-      category: "teamwork",
+      category: "React",
       description: "An online shopping platform.",
-      platform: "Tilda",
+      platform: "React",
       link: "https://example.com/project2",
       image: "/image/project2.jpg"
     },
     {
       id: 3,
       title: "Personal Blog",
-      category: "work",
+      category: "Vue",
       description: "A personal blog built with Vue.js.",
       platform: "Vue.js",
       link: "https://example.com/project3",

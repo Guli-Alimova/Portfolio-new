@@ -26,10 +26,10 @@ const InputField: React.FC<InputFieldProps> = ({
         id={name}
         name={name}
         type={type}
-        placeholder={placeholder}
+        // placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="w-full  border-b-2 bg-[#F8FBFB]  focus:outline-none focus:ring-2 focus:ring-gray-400 focus:rounded-lg focus:py-2 px-4"
       />
     </div>
   );

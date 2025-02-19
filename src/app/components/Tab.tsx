@@ -13,17 +13,17 @@ const Tab = () => {
   return (
     <div>
       {/* Tab tugmalari */}
-      <div className="mt-[-115px] mb-2.5 flex flex-wrap justify-between max-w-[503px] w-full ml-auto py-[10px] px-[31px] border-2 border-[#F2F7FC] shadow-nav rounded-[20px]">
-  <BtnTab onClick={() => setActiveTab("home")} className="w-full max-w-auto mb-2 sm:mb-0">
+      <div className="mt-[-115px] mb-2.5 flex flex-wrap justify-between max-w-[503px] w-full ml-auto py-[10px] px-[31px] border-2 border-[#F2F7FC] shadow-nav rounded-[20px] ">
+  <BtnTab onClick={() => setActiveTab("home")} className="w-full max-w-auto mb-2 sm:mb-0 hover:bg-orange-500 hover:text-white">
     <Home /> Home
   </BtnTab>
-  <BtnTab onClick={() => setActiveTab("resume")} className="w-full max-w-auto mb-2 sm:mb-0">
+  <BtnTab onClick={() => setActiveTab("resume")} className="w-full max-w-auto mb-2 sm:mb-0  hover:bg-orange-500 hover:text-white">
     <ResumeMe /> Resume
   </BtnTab>
-  <BtnTab onClick={() => setActiveTab("work")} className="w-full max-w-auto mb-2 sm:mb-0">
+  <BtnTab onClick={() => setActiveTab("work")} className="w-full max-w-auto mb-2 sm:mb-0  hover:bg-orange-500 hover:text-white">
     <span ><Work /> Work</span>
   </BtnTab>
-  <BtnTab onClick={() => setActiveTab("contact")} className="w-full max-w-auto mb-2 sm:mb-0">
+  <BtnTab onClick={() => setActiveTab("contact")} className="w-full max-w-auto mb-2 sm:mb-0  hover:bg-orange-500 hover:text-white">
     <Contact /> Contact
   </BtnTab>
 </div>
