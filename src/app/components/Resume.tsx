@@ -142,8 +142,8 @@ const Resume = () => {
             <h4 className='text-lg sm:text-xl font-semibold'>Education</h4>
           </div>
           {education.map((item) => (
-            <ResumeCard key={item.id} item={item} />
-          ))}
+  <ResumeCard key={item.id} item={{ ...item, about: item.about || "" }} />
+))}
         </div>
 
         <div>

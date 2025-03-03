@@ -4,7 +4,7 @@ interface ResumeItem {
   id: number;
   title: string;
   year: string;
-  about: string;
+  about?: string; 
 }
 const ResumeCard = ({ item }: { item: ResumeItem }) => {
   return (
