@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mood } from '../common/svg';
+
 
 const Header = () => {
   return (

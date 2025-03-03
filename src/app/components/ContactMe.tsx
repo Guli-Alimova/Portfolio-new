@@ -65,9 +65,9 @@ const Contact: React.FC = () => {
           I am always open to discussing <span className='font-bold'>new projects, opportunities in tech world, partnerships</span> and more so <span className='font-bold'>mentorship.</span>
         </p>
         <form onSubmit={handleSubmit} className='mt-4'>
-          <InputField label='Name' type='text' name='name' placeholder='Enter your name' value={formData.name} onChange={handleChange} />
-          <InputField label='Email' type='email' name='email' placeholder='Enter your email' value={formData.email} onChange={handleChange} />
-          <InputField label='Message' type='text' name='message' placeholder='Enter your message' value={formData.message} onChange={handleChange} />
+          <InputField label='Name' type='text' name='name' value={formData.name} onChange={handleChange} />
+          <InputField label='Email' type='email' name='email'  value={formData.email} onChange={handleChange} />
+          <InputField label='Message' type='text' name='message'  value={formData.message} onChange={handleChange} />
           <button type='submit' className='w-full sm:w-auto px-[30px] py-2.5 mt-2.5 bg-transparent border-2 border-orange-500 text-primary rounded-[20PX] hover:bg-orange-600 hover:text-white'>Submit</button>
         </form>
       </div>

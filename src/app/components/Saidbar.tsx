@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Call, Download, Email, Facebook, Github, Instagram, Location, Telegram } from '../common/svg'
+import { Call, Download, Email, Github, Instagram, Location, Telegram } from '../common/svg'
 import Button from '../common/Button'
 
 
