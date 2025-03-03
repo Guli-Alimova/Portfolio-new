@@ -101,7 +101,7 @@ const Portfolio: React.FC = () => {
   const filteredProjects = activeTab === "all" ? projects : projects.filter((project) => project.category === activeTab);
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 bg-white rounded-2xl">
+    <div className="p-4 sm:pt-[18px] sm:pr-[55px] sm:pb-[32px] sm:pl-[71px] bg-white rounded-[20px]">
       <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
         <h3 className="poppins text-2xl sm:text-3xl md:text-4xl font-medium text-[#0B0909] uppercase">
           Portfolio

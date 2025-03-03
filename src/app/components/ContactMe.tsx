@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className='p-4 sm:p-6 md:p-8 bg-white rounded-[20px]'>
+    <div className='p-4 sm:pt-[18px] sm:pr-[55px] sm:pb-[32px] sm:pl-[71px] bg-white rounded-[20px]'>
       <div className='flex flex-col sm:flex-row items-center gap-4 sm:gap-8'>
         <h3 className='poppins text-xl sm:text-2xl md:text-3xl lg:text-[40px] font-medium leading-tight tracking-wide text-[#0B0909] uppercase'>Contact</h3>
         <span className='w-24 sm:w-[252px] h-[2px] rounded bg-linear inline-block gradient-bg'></span>
