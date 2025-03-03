@@ -6,40 +6,94 @@ const Portfolio: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: "Project Management App",
+      title: "Personal blog",
       category: "React",
-      description: "A web application for managing projects.",
+      description: "Первый курс по уходу за новорождёнными для будущих мам в Узбекистане",
       platform: "React",
-      link: "https://example.com/project1",
-      image: "/image/project1.jpg"
+      link: "https://www.momsclub.uz/",
+      image: "/image/momsclub.png"
     },
     {
       id: 2,
-      title: "E-commerce Website",
+      title: "Landing page",
       category: "React",
-      description: "An online shopping platform.",
+      description: "Откройте 'Мир - семейного пробиотика'",
       platform: "React",
-      link: "https://example.com/project2",
-      image: "/image/project2.jpg"
+      link: "https://bifidopro.uz/",
+      image: "/image/bifidopro.png"
     },
     {
       id: 3,
       title: "Personal Blog",
       category: "Vue",
-      description: "A personal blog built with Vue.js.",
+      description: "Yosh Saylovchi",
       platform: "Vue.js",
-      link: "https://example.com/project3",
-      image: "/image/project3.jpg"
+      link: "https://yoshsaylovchi2021.vercel.app/",
+      image: "/image/yosh saylovchi.png"
     },
     {
       id: 4,
       title: "Landing Page",
-      category: "tilda",
-      description: "A simple landing page built with Tilda.",
+      category: "Tilda",
+      description: "Проблемы и перспективы улучшения качества жизни пациентов",
       platform: "Tilda",
-      link: "https://example.com/project4",
-      image: "/image/project4.jpg"
-    }
+      link: "http://conferene.did.tilda.ws/",
+      image: "/image/conference.png"
+    },
+    {
+      id: 5,
+      title: "E-commerce",
+      category: "Tilda",
+      description: "Осветите свою жизнь стилем",
+      platform: "Tilda",
+      link: "http://stalkergarant.uz.tilda.ws/",
+      image: "/image/stalker.png"
+    },
+    {
+      id: 6,
+      title: "E-commerce",
+      category: "React",
+      description: "Счастье не купишьно можно купить ТОРТ",
+      platform: "React",
+      link: "https://benissimo-uz.vercel.app/",
+      image: "/image/benissimo.png"
+    },
+    {
+      id: 7,
+      title: "E-commerce",
+      category: "React",
+      description: "Sizning Sog'lig'ingiz biz uchun Muhim.",
+      platform: "React",
+      link: "https://brilliant-water-2xga.vercel.app/",
+      image: "/image/brilliantwater.png"
+    },
+    {
+      id: 8,
+      title: "E-commerce",
+      category: "Tilda",
+      description: "Функциональный интерьер квартиры",
+      platform: "Tilda",
+      link: "https://interyerdesign.tilda.ws/",
+      image: "/image/interyer.png"
+    },
+    {
+      id: 9,
+      title: "E-commerce",
+      category: "React",
+      description: "Millions of movie, TV shows and people to discover. Explore now.",
+      platform: "React",
+      link: "https://movieapp-rouge.vercel.app/",
+      image: "/image/movie.png"
+    },
+    {
+      id: 10,
+      title: "E-commerce",
+      category: "Vue",
+      description: "Let's Create Your Dream Interior",
+      platform: "Vue",
+      link: "https://interyer.vercel.app/",
+      image: "/image/interyerhome.png"
+    },
   ];
 
   const categories = ["all", ...Array.from(new Set(projects.map((project) => project.category)))];
