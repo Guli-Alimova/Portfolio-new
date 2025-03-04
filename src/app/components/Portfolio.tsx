@@ -128,7 +128,7 @@ const Portfolio: React.FC = () => {
           filteredProjects.map((project) => (
             <a key={project.id} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
               <div className="border p-2 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <Image src={project.image} alt={project.title} className="w-full h-40 object-cover rounded-lg" />
+                <Image src={project.image} alt={project.title} width={334} height={100} className="w-full h-40 object-cover rounded-lg" />
                 <h3 className="poppins font-medium text-lg text-primary mt-2">{project.title}</h3>
                 <p className="poppins text-sm text-gray-600">{project.description}</p>
               </div>

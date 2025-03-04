@@ -43,9 +43,12 @@ export default function RootLayout({
       >
         <Header/>
         <div className=" bg-[#EBF2FA] py-[152px]">
-        <div className="container flex gap-[9px]"> 
-          <Saidbar/> 
-          <MainContant/>
+        <div className="container"> 
+          <div className="flex flex-col sm:flex-row gap-[9px]">
+           <Saidbar/> 
+          <MainContant/>  
+          </div>
+         
         </div> 
         </div>
        

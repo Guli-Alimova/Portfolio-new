@@ -19,21 +19,21 @@ const Tab = () => {
 
   return (
     <>
-    <div className="mt-[-115px] mb-2.5 flex flex-wrap justify-between max-w-[503px] w-full ml-auto py-[10px] px-[31px] border-2 border-[#F2F7FC] shadow-nav rounded-[20px]">
-      {tabs.map((tab) => (
-        <BtnTab
-          key={tab.id}
-          onClick={() => setActiveTab(tab.id)}
-          className="flex flex-col justify-center items-center hover:bg-orange-500 hover:text-white text-tabColor transition-all"
-        >
-          {tab.icon} {tab.label}
-        </BtnTab>
-      ))}
-    </div>
-    <div>
-      {tabs.find((tab) => tab.id === activeTab)?.component}
-    </div>
-  </>
+      <div className="mt-[-115px] mb-2.5 flex sm:flex-wrap gap-2 justify-between flex-nowrap max-w-[503px] w-full ml-auto py-[10px] px-[31px] border-2 border-[#F2F7FC] shadow-nav rounded-[20px]">
+        {tabs.map((tab) => (
+          <BtnTab
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className="flex flex-col justify-center items-center hover:bg-orange-500 hover:text-white text-tabColor transition-all "
+          >
+            {tab.icon} {tab.label}
+          </BtnTab>
+        ))}
+      </div>
+      <div>
+        {tabs.find((tab) => tab.id === activeTab)?.component}
+      </div>
+    </>
   );
 };
 
