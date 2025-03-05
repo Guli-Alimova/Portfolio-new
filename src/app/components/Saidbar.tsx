@@ -14,6 +14,11 @@ const Saidbar = () => {
 
   return (
     <div className='sm:bg-white w-full sm:w-[400px] h-full relative pt-[114px] rounded-lg pb-[110px] sm:pb-[66px] px-[25px] bg-transparent block'>
+        {!isExpanded && (
+        <div className="absolute top-[-63px] left-[22%] transform -translate-x-1/2 sm:hidden rotate-45">
+         <Image src="/image/Animation - 1741197977452.gif" alt='animation' width={100} height={100} />
+       </div>
+      )}
       <div className='drop-shadow-2xl absolute top-[-141px] sm:top-[-112px] left-[50%] transform -translate-x-1/2 '>
         <Image 
           src="/image/Дизайн без названия (4).png" 
