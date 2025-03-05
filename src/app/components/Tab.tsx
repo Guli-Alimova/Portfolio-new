@@ -19,12 +19,13 @@ const Tab = () => {
 
   return (
     <>
-      <div className="mt-[-115px] mb-2.5 flex sm:flex-wrap gap-2 justify-between flex-nowrap max-w-[503px] w-full ml-auto py-[10px] px-[31px] border-2 border-[#F2F7FC] shadow-nav rounded-[20px]">
+      <div className="mt-[-115px] mb-2.5 flex flex-wrap sm:flex-nowrap gap-2 justify-between max-w-[503px] w-full ml-auto py-[10px] px-[31px] border-2 border-[#F2F7FC] shadow-nav rounded-[20px]">
         {tabs.map((tab) => (
           <BtnTab
             key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className="flex flex-col justify-center items-center hover:bg-orange-500 hover:text-white text-tabColor transition-all "
+            onClick={() => {setActiveTab(tab.id)}}
+            className={`flex flex-col justify-center items-center hover:bg-orange-500 hover:text-white text-tabColor transition-all  ${activeTab === tab.id ? "text-orange-500 font-bold" : "text-gray-500"} z-10 `}
+            aria-label={tab.label}
           >
             {tab.icon} {tab.label}
           </BtnTab>
