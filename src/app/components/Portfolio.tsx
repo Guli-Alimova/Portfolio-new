@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import Image from "next/image"
+import PortfolioCard from "./PortfolioCard";
+
+
 const Portfolio: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("all");
 
   const projects = [
     {
       id: 1,
-      title: "Personal blog",
-      category: "React",
+      title: "Business blog",
+      category: "Next",
       description: "Первый курс по уходу за новорождёнными для будущих мам в Узбекистане",
-      platform: "React",
+      platform: "Next",
       link: "https://www.momsclub.uz/",
       image: "/image/momsclub.png"
     },
@@ -22,15 +25,15 @@ const Portfolio: React.FC = () => {
       link: "https://bifidopro.uz/",
       image: "/image/bifidopro.png"
     },
-    {
-      id: 3,
-      title: "Personal Blog",
-      category: "Vue",
-      description: "Yosh Saylovchi",
-      platform: "Vue.js",
-      link: "https://yoshsaylovchi2021.vercel.app/",
-      image: "/image/yosh saylovchi.png"
-    },
+    // {
+    //   id: 3,
+    //   title: "Info blog",
+    //   category: "Vue",
+    //   description: "Yosh Saylovchi",
+    //   platform: "Vue",
+    //   link: "https://yoshsaylovchi2021.vercel.app/",
+    //   image: "/image/yosh saylovchi.png"
+    // },
     {
       id: 4,
       title: "Landing Page",
@@ -56,17 +59,17 @@ const Portfolio: React.FC = () => {
       description: "Счастье не купишьно можно купить ТОРТ",
       platform: "React",
       link: "https://benissimo-uz.vercel.app/",
-      image: "/image/benissimo.png"
+      image: ""
     },
-    {
-      id: 7,
-      title: "E-commerce",
-      category: "React",
-      description: "Sizning Sog'lig'ingiz biz uchun Muhim.",
-      platform: "React",
-      link: "https://brilliant-water-2xga.vercel.app/",
-      image: "/image/brilliantwater.png"
-    },
+    // {
+    //   id: 7,
+    //   title: "E-commerce",
+    //   category: "React",
+    //   description: "Sizning Sog'lig'ingiz biz uchun Muhim.",
+    //   platform: "React",
+    //   link: "https://brilliant-water-2xga.vercel.app/",
+    //   image: "/image/brilliantwater.png"
+    // },
     {
       id: 8,
       title: "E-commerce",
@@ -74,7 +77,7 @@ const Portfolio: React.FC = () => {
       description: "Функциональный интерьер квартиры",
       platform: "Tilda",
       link: "https://interyerdesign.tilda.ws/",
-      image: "/image/interyer.png"
+      image: ""
     },
     {
       id: 9,
@@ -83,17 +86,17 @@ const Portfolio: React.FC = () => {
       description: "Millions of movie, TV shows and people to discover. Explore now.",
       platform: "React",
       link: "https://movieapp-rouge.vercel.app/",
-      image: "/image/movie.png"
+      image: ""
     },
-    {
-      id: 10,
-      title: "E-commerce",
-      category: "Vue",
-      description: "Let's Create Your Dream Interior",
-      platform: "Vue",
-      link: "https://interyer.vercel.app/",
-      image: "/image/interyerhome.png"
-    },
+    // {
+    //   id: 10,
+    //   title: "E-commerce",
+    //   category: "Vue",
+    //   description: "Let's Create Your Dream Interior",
+    //   platform: "Vue",
+    //   link: "https://interyer.vercel.app/",
+    //   image: "/image/interyerhome.png"
+    // },
   ];
 
   const categories = ["all", ...Array.from(new Set(projects.map((project) => project.category)))];
@@ -101,7 +104,7 @@ const Portfolio: React.FC = () => {
   const filteredProjects = activeTab === "all" ? projects : projects.filter((project) => project.category === activeTab);
 
   return (
-    <div className="p-4 sm:pt-[18px] sm:pr-[55px] sm:pb-[32px] sm:pl-[71px] bg-white rounded-[20px]">
+    <>
       <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
         <h3 className="poppins text-2xl sm:text-3xl md:text-4xl font-medium text-[#0B0909] uppercase">
           Portfolio
@@ -125,20 +128,14 @@ const Portfolio: React.FC = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
         {filteredProjects.length > 0 ? (
-          filteredProjects.map((project) => (
-            <a key={project.id} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
-              <div className="border p-2 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <Image src={project.image} alt={project.title} width={334} height={100} className="w-full h-40 object-cover rounded-lg" />
-                <h3 className="poppins font-medium text-lg text-primary mt-2">{project.title}</h3>
-                <p className="poppins text-sm text-gray-600">{project.description}</p>
-              </div>
-            </a>
+          filteredProjects.map((item) => (
+          <PortfolioCard item={item} key={item.id} />
           ))
         ) : (
           <p className="text-gray-500 text-center w-full">No projects found.</p>
         )}
       </div>
-    </div>
+    </>
   );
 };
 

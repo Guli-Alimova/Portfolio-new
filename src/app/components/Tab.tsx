@@ -6,16 +6,17 @@ import About from "./About";
 import Resume from "./Resume";
 import Portfolio from "./Portfolio";
 import ContactMe from "./ContactMe";
+import "../styles/globals.css"
 
 const tabs = [
-  { id: "home", label: "Home", icon: <Home />, component: <About /> },
-  { id: "resume", label: "Resume", icon: <ResumeMe />, component: <Resume /> },
-  { id: "work", label: "Work", icon: <Work />, component: <Portfolio /> },
-  { id: "contact", label: "Contact", icon: <Contact />, component: <ContactMe /> },
+  { id: 1, label: "Home", icon: <Home />, component: <About /> },
+  { id: 2, label: "Resume", icon: <ResumeMe />, component: <Resume /> },
+  { id: 3, label: "Work", icon: <Work />, component: <Portfolio /> },
+  { id: 4, label: "Contact", icon: <Contact />, component: <ContactMe /> },
 ];
 
 const Tab = () => {
-  const [activeTab, setActiveTab] = useState("home");
+  const [activeTab, setActiveTab] = useState(1);
 
   return (
     <>
@@ -24,14 +25,14 @@ const Tab = () => {
           <BtnTab
             key={tab.id}
             onClick={() => {setActiveTab(tab.id)}}
-            className={`flex flex-col justify-center items-center hover:bg-orange-500 hover:text-white text-tabColor transition-all  ${activeTab === tab.id ? "text-orange-500 font-bold" : "text-gray-500"} z-10 `}
+            className={`flex flex-col justify-center items-center hover:gradient-bg hover:text-white text-tabColor transition-all  ${activeTab === tab.id ? "gradient-bg text-white" : "hover:gradient-bg hover:text-white"} z-10 `}
             aria-label={tab.label}
           >
-            {tab.icon} {tab.label}
+            {tab.icon}{tab.label}
           </BtnTab>
         ))}
       </div>
-      <div>
+      <div className="p-4 sm:pt-[18px] sm:pr-[55px] sm:pb-[32px] sm:pl-[71px] bg-white rounded-[20px]">
         {tabs.find((tab) => tab.id === activeTab)?.component}
       </div>
     </>

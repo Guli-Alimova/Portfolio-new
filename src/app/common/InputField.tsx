@@ -16,8 +16,9 @@ const InputField: React.FC<InputFieldProps> = ({
   onChange,
 }) => {
   return (
-    <div className="mb-4">
-      <label htmlFor={name} className="block text-gray-700 font-medium mb-2">
+    <>
+    
+      <label htmlFor={name} className="block text-gray-700 font-medium mb-2 mt-4">
         {label}:
       </label>
       <input
@@ -28,7 +29,9 @@ const InputField: React.FC<InputFieldProps> = ({
         onChange={onChange}
         className="w-full  border-b-2 bg-[#F8FBFB]  focus:outline-none focus:ring-2 focus:ring-gray-400 focus:rounded-lg focus:py-2 px-4"
       />
-    </div>
+      
+
+    </>
   );
 };
 
