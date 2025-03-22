@@ -74,6 +74,9 @@ list-style: none;
 .gradient-bg{
   background: linear-gradient(180deg, #FF9C1A, #ED250A)
 }
+.hover-gradient-bg:hover{
+  background: linear-gradient(180deg, #FF9C1A, #ED250A)
+}
 .shadow-nav{
   box-shadow: 0px 0px 4px  rgba(0, 0, 0, 0.25)
 }

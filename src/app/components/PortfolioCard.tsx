@@ -1,12 +1,12 @@
 import React from 'react';
-import Image from 'next/image'; // Image komponentini import qilish
+import Image from 'next/image'; 
 
 interface Portfolio {
   id: number;
   link: string;
-  title?: string; // title ixtiyoriy (optional)
-  image?: string; // image ixtiyoriy (optional)
-  description?: string; // description ixtiyoriy (optional)
+  title?: string; 
+  image?: string; 
+  description?: string; 
 }
 
 const PortfolioCard = ({ item }: { item: Portfolio }) => {

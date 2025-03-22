@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Image from "next/image"
 import PortfolioCard from "./PortfolioCard";
 
 
 const Portfolio: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("all");
+  const [visibleCards, setVisibleCards] = useState<number>(4); 
 
   const projects = [
     {
@@ -103,6 +103,9 @@ const Portfolio: React.FC = () => {
 
   const filteredProjects = activeTab === "all" ? projects : projects.filter((project) => project.category === activeTab);
 
+  const loadMore = () => {
+    setVisibleCards((prev) => prev + 4); 
+  };
   return (
     <>
       <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
@@ -117,9 +120,12 @@ const Portfolio: React.FC = () => {
           <button
             key={index}
             className={`poppins text-sm sm:text-base font-medium py-2 px-4 rounded-md transition-colors ${
-              activeTab === category ? "gradient-text" : " text-silver hover:gradient-bg"
+              activeTab === category ? "gradient-text" : "text-silver hover:gradient-bg"
             }`}
-            onClick={() => setActiveTab(category)}
+            onClick={() => {
+              setActiveTab(category);
+              setVisibleCards(4); 
+            }}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </button>
@@ -128,15 +134,28 @@ const Portfolio: React.FC = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
         {filteredProjects.length > 0 ? (
-          filteredProjects.map((item) => (
-          <PortfolioCard item={item} key={item.id} />
-          ))
+          filteredProjects
+            .slice(0, visibleCards) 
+            .map((item) => <PortfolioCard item={item} key={item.id} />)
         ) : (
           <p className="text-gray-500 text-center w-full">No projects found.</p>
         )}
       </div>
+
+    
+      {filteredProjects.length > visibleCards && (
+        <div className="flex justify-center mt-6">
+          <button
+            onClick={loadMore}
+            className="px-6 py-2 gradient-bg text-white rounded-lg hover:hover:shadow-lg transition-shadow"
+          >
+            Load More
+          </button>
+        </div>
+      )}
     </>
   );
+
 };
 
 export default Portfolio;

@@ -71,7 +71,7 @@ const Saidbar = () => {
           <a 
             href='/pdf/CV_Alimova.pdf'
             download="CV_Alimova.pdf"
-            className='py-[12px] px-[20px] rounded-[20px] gradient-bg text-white flex gap-2 items-center mt-[16px] mb-[33px] mx-auto hover:bg-transparent'
+            className='py-[12px] px-[20px] rounded-[20px] gradient-bg text-white flex gap-2 items-center mt-[16px] mb-[33px] mx-auto hover:hover:shadow-lg transition-shadow'
           >
             <Download /> Download Resume
           </a>
