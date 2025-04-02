@@ -44,29 +44,36 @@ const Saidbar = () => {
         </div>
 
         <div className='p-[33px] bg-[#F2F5F9] rounded-[20px]'>
-          <div className='flex items-center gap-[11px] border-b-2 border-[#E3E3E3]'>
+          <a  href="tel:+998974545053" className='flex items-center gap-[11px] border-b-2 border-[#E3E3E3]'>
             <Call />
             <div className='raleway text-sm not-italic font-semibold text-primary pb-[18px] pl-[12px]'>
               <p className='text-silver'>Phone</p>
               <span>+998974545053</span>
             </div>
-          </div>
+          </a>
 
-          <div className='flex items-center gap-[11px] border-b-2 border-[#E3E3E3]'>
+          <a href='mailto:guli.takhirjanova92@gmail.com' className='flex items-center gap-[11px] border-b-2 border-[#E3E3E3] '  
+          onClick={(e) => {
+    // Brauzer bloklagan holatda yordamchi funksiya
+    window.location.href = "mailto:guli.takhirjanova92@gmail.com";
+    e.preventDefault();
+  }}>
             <Email />
             <div className='raleway text-sm not-italic font-semibold text-primary pb-[18px] pt-[16px] pl-[12px]'>
               <p className='text-silver'>Email</p>
               <span>guli.takhirjanova92@gmail.com</span>
             </div>
-          </div>
+          </a>
 
-          <div className='flex items-center gap-[11px] border-b-2 border-[#E3E3E3]'>
+          <a   href="https://www.google.com/maps/place/Yangiabad+St,+Tashkent,+Uzbekistan/"
+  target="_blank"
+  rel="noopener noreferrer" className='flex items-center gap-[11px] border-b-2 border-[#E3E3E3]'>
             <Location />
             <div className='raleway text-sm not-italic font-semibold text-primary pb-[21px] pt-[16px] pl-[12px]'>
               <p className='text-silver'>Location</p>
               <span>Uzbekistan, Tashkent</span>
             </div>
-          </div>
+          </a>
 
           <a 
             href='/pdf/CV_Alimova.pdf'
