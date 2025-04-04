@@ -25,7 +25,7 @@ const Tab = () => {
           <BtnTab
             key={tab.id}
             onClick={() => {setActiveTab(tab.id)}}
-            className={`flex flex-col justify-center items-center hover:bg-[hover-gradient-bg]  hover:text-white text-tabColor transition-all  ${activeTab === tab.id ? "gradient-bg text-white" : "hover:gradient-bg hover:text-white"} z-10 `}
+            className={`flex flex-col justify-center items-center hover:gradientBg  hover:text-white text-tabColor transition-all  ${activeTab === tab.id ? " gradientBg text-white" : "hover:gradientBg hover:text-white"} z-10 `}
             aria-label={tab.label}
           >
             {tab.icon}{tab.label}

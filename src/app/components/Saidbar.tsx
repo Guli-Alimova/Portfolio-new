@@ -44,7 +44,8 @@ const Saidbar = () => {
         </div>
 
         <div className='p-[33px] bg-[#F2F5F9] rounded-[20px]'>
-          <a  href="tel:+998974545053" className='flex items-center gap-[11px] border-b-2 border-[#E3E3E3]'>
+          <a  href="tel:+998974545053" target="_blank"
+           rel="noopener noreferrer"  className='flex items-center gap-[11px] border-b-2 border-[#E3E3E3]'>
             <Call />
             <div className='raleway text-sm not-italic font-semibold text-primary pb-[18px] pl-[12px]'>
               <p className='text-silver'>Phone</p>
@@ -54,7 +55,6 @@ const Saidbar = () => {
 
           <a href='mailto:guli.takhirjanova92@gmail.com' className='flex items-center gap-[11px] border-b-2 border-[#E3E3E3] '  
           onClick={(e) => {
-    // Brauzer bloklagan holatda yordamchi funksiya
     window.location.href = "mailto:guli.takhirjanova92@gmail.com";
     e.preventDefault();
   }}>
@@ -78,7 +78,7 @@ const Saidbar = () => {
           <a 
             href='/pdf/CV_Alimova.pdf'
             download="CV_Alimova.pdf"
-            className='py-[12px] px-[20px] rounded-[20px] gradient-bg text-white flex gap-2 items-center mt-[16px] mb-[33px] mx-auto hover:hover:shadow-lg transition-shadow'
+            className='py-[12px] px-[20px] rounded-[20px] gradientBg text-white flex gap-2 items-center mt-[16px] mb-[33px] mx-auto hover:hover:shadow-lg transition-shadow'
           >
             <Download /> Download Resume
           </a>
